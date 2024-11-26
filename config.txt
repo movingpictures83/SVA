@@ -1,0 +1,7 @@
+Prefix pipelines/SVA/
+#Plugin Leek inputfile parameters/parameters.leek.txt outputfile leek.csv
+#Plugin SurrogateP inputfile parameters/parameters.svp.txt outputfile surrogate.csv
+#Plugin Linear inputfile parameters/parameters.svp.txt outputfile linear.rds
+#Plugin Contrasts inputfile linear.rds outputfile contrasts.rds
+#Plugin FValue inputfile contrasts.rds outputfile fvalue.csv
+Plugin ComBat inputfile parameters/parameters.leek.txt outputfile combat.csv
